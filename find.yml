@@ -1,0 +1,8 @@
+---
+- hosts: webservers
+  tasks:
+  - name: to find out the /etc/fstab
+    find: path="/etc" patterns="fstab"
+    register: result
+  - debug: var=result
+
